@@ -1,0 +1,97 @@
+/* formatações gerais */
+body {
+	font-family: arial, sans-serif, monospace;
+	font-size: 1.2em;
+	margin: 0;
+}
+
+header, footer {
+	background-color: #AA3C39;
+}
+
+nav {
+	background-color: orange;
+}
+
+aside{
+    color: white;
+    background-color: #46AE8F;
+}
+
+header, footer, nav, aside, main {
+	padding: 10px;
+}
+
+h1, footer {
+	color: #D7C16F;
+}
+
+h2 {
+	color: #267356;
+}
+
+header p {
+	color: mintcream;
+}
+
+hr {
+    color: #D79D4F;
+}
+
+/* links */
+
+a {
+	text-decoration: none;
+}
+
+a:link{
+	/* link não visitado */
+	color: #574400;
+}
+
+a:visited{
+	color: #267356;
+}
+
+a:active{
+	color: lightblue;
+}
+
+a:hover{
+	color:#AA3C39;
+	text-shadow: 3px 3px 5px white; /* sombra horiz., vert., distancia e cor */
+}
+
+
+/* menu */
+nav ul li {
+	display: inline;
+	margin: 0 20px 0 0;
+}
+   
+/* chat */
+
+#chat{
+    color: black;
+    background-color: lightyellow;
+}
+
+/* tabela */
+th, table, td{
+	border: 1px solid black;
+	border-collapse: collapse;
+    padding: 10px;
+}
+
+th{
+	background-color: #AC653B;
+	color: white;
+}
+
+tr:nth-child(even){
+	background-color: #FFEEAF;
+}
+
+tr:nth-child(odd){
+	background-color: #CCC;
+}

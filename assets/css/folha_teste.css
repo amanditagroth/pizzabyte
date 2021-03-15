@@ -1,0 +1,24 @@
+.teste {
+    color: darkmagenta; border: 5px solid blue;
+}
+
+p {
+    color: red;
+}
+
+#exemplo{
+    color: green;
+}
+
+/* formato de regra CSS:
+seletor {
+    propriedade1: valor1;
+    propriedade2: valor2;
+}
+
+seletores mais comuns:
+- nome do elemento html
+- classe (inicia com .)
+- id (inicia com #)
+
+*/

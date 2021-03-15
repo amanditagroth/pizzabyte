@@ -1,7 +1,7 @@
-/* formatações gerais */
+/********************************************************* formatações gerais */
 body {
 	font-family: arial, sans-serif, monospace;
-	font-size: 1.2em;
+	font-size: 1.2em; /* em é uma medida relativa ao tamanho atual da letra no navegador */
 	margin: 0;
 }
 
@@ -19,7 +19,7 @@ aside{
 }
 
 header, footer, nav, aside, main {
-	padding: 10px;
+	padding: 10px;  /* "enchimento" entre o conteúdo e a borda */
 }
 
 h1, footer {
@@ -32,16 +32,27 @@ h2 {
 
 header p {
 	color: mintcream;
+	font-weight: bold;
+	font-style: italic;
+	font-family: serif;
+	text-transform: capitalize;
+	text-indent: 30px;
+	letter-spacing: 5px;
+	word-spacing: 10px;
+	direction: ltr; /* left to right */
 }
 
 hr {
     color: #D79D4F;
 }
 
-/* links */
+main p {
+	line-height: 1.5; /* altura da linha */
+}
 
+/*************************************************** links */
 a {
-	text-decoration: none;
+	text-decoration: none; /* retira o sublinhado dos links */
 }
 
 a:link{
@@ -50,37 +61,42 @@ a:link{
 }
 
 a:visited{
+	/* link visitado */
 	color: #267356;
 }
 
 a:active{
+	/* link no momento em que está sendo clicado */
 	color: lightblue;
 }
 
 a:hover{
+	/* link quando o mouse está sobre ele */
 	color:#AA3C39;
 	text-shadow: 3px 3px 5px white; /* sombra horiz., vert., distancia e cor */
 }
 
 
-/* menu */
+/***************************************************** menu */
+
 nav ul li {
-	display: inline;
-	margin: 0 20px 0 0;
+	display: inline; /* transforma elementos de bloco em inline */
+	margin: 0 20px 0 0; /* sentido horário: top, right, bottom, left */
+	/*margin-right: 20px; -> alternativa */
 }
    
-/* chat */
+/***************************************************** chat */
 
 #chat{
     color: black;
     background-color: lightyellow;
 }
 
-/* tabela */
-th, table, td{
+/***************************************************** tabela */
+table, th, td{
 	border: 1px solid black;
 	border-collapse: collapse;
-    padding: 10px;
+    padding: 10px; 
 }
 
 th{
@@ -94,4 +110,61 @@ tr:nth-child(even){
 
 tr:nth-child(odd){
 	background-color: #CCC;
+}
+
+/****************************************************** imagem da home */
+#byte{
+	width: 50%;
+	max-width: 400px;
+} 
+
+#imgByte{
+	text-align: center;
+} 
+
+#imgByte h3{
+	float: left;
+} 
+
+
+/****************************************************** imagem quem somos */
+
+#heart{
+	float: left;
+} 
+
+.clear{
+	clear: both; /* limpa os floats à esquerda e à direita */
+} 
+
+/******************************************************* layout */
+
+main {
+	width: 85%;
+} 
+
+aside{
+	width: 15%;
+	height: 400px;
+	margin-top: 20px;
+} 
+
+* { /* aplica a todos os elementos */
+	box-sizing: border-box;
+} 
+
+main, aside{
+	float: left;
+} 
+
+footer{
+	clear: left;
+} 
+
+/******************************************************* formulários */
+
+input[type=text], input[type=email], input[type=password], input[type=tel],
+input[type=date],textarea, select {
+	background-color:lightgray;
+
 }

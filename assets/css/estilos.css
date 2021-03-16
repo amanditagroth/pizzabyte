@@ -30,6 +30,9 @@ h2 {
 	color: #267356;
 }
 
+header{
+	position: relative; /* para que o elemento filho possa usar o posicionamento absolute */
+}
 header p {
 	color: mintcream;
 	font-weight: bold;
@@ -40,6 +43,9 @@ header p {
 	letter-spacing: 5px;
 	word-spacing: 10px;
 	direction: ltr; /* left to right */
+	position: absolute;
+	right: 10px;
+	bottom: 0px;
 }
 
 hr {
@@ -90,6 +96,11 @@ nav ul li {
 #chat{
     color: black;
     background-color: lightyellow;
+	width: 300px;
+	height: 150px;
+	position: fixed;
+	bottom: 0;
+	right: 50px;
 }
 
 /***************************************************** tabela */
@@ -124,6 +135,9 @@ tr:nth-child(odd){
 
 #imgByte h3{
 	float: left;
+	position: relative;
+	top: 50px;
+	left: 50px;
 } 
 
 
@@ -131,6 +145,8 @@ tr:nth-child(odd){
 
 #heart{
 	float: left;
+	/* display: none; */
+	/* visibility: hidden; */
 } 
 
 .clear{

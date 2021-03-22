@@ -86,9 +86,18 @@ a:hover{
 /***************************************************** menu */
 
 nav ul li {
-	display: inline; /* transforma elementos de bloco em inline */
-	margin: 0 20px 0 0; /* sentido horário: top, right, bottom, left */
-	/*margin-right: 20px; -> alternativa */
+	list-style-type: none;
+	padding: 5px;
+}
+
+nav  {
+	display: none;
+}
+
+#showMenu{
+	color: white;
+	border: 1px solid white;
+	padding: 5px;
 }
    
 /***************************************************** chat */
@@ -101,6 +110,7 @@ nav ul li {
 	position: fixed;
 	bottom: 0;
 	right: 50px;
+	display: none;
 }
 
 /***************************************************** tabela */
@@ -144,8 +154,7 @@ tr:nth-child(odd){
 /****************************************************** imagem quem somos */
 
 #heart{
-	float: left;
-	/* display: none; */
+	display: none;
 	/* visibility: hidden; */
 } 
 
@@ -156,25 +165,15 @@ tr:nth-child(odd){
 /******************************************************* layout */
 
 main {
-	width: 85%;
+	width: 100%; /* dispensável, pois elementos de bloco por padrão têm 100% */
 } 
 
 aside{
-	width: 15%;
-	height: 400px;
-	margin-top: 20px;
+	width: 100%; /* dispensável, pois elementos de bloco por padrão têm 100% */
 } 
 
 * { /* aplica a todos os elementos */
 	box-sizing: border-box;
-} 
-
-main, aside{
-	float: left;
-} 
-
-footer{
-	clear: left;
 } 
 
 /******************************************************* formulários */
@@ -183,4 +182,105 @@ input[type=text], input[type=email], input[type=password], input[type=tel],
 input[type=date],textarea, select {
 	background-color:lightgray;
 
+}
+
+/******************************************************** footer */
+footer ul li {
+	display: inline;
+}
+
+footer{
+	display: flex;
+	flex-direction: row; /* linha - default */
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+/******************************************************* pedidos */
+
+.sabor{
+	width: 400px;
+	min-height: 100px;
+	padding: 5px;
+	background-color: #eeeeee;
+	border: 1px solid #cccccc;
+	margin: 5px;
+	transition: 0.5s;
+}
+
+.sabor:hover{
+	box-shadow: 3px 3px 10px #AA3C39;
+	transition: 0.5s;
+}
+
+.sabor img{
+	width: 80px;
+	border-radius: 40px;
+	margin: 0 20px 0 20px;
+}
+
+.sabor label{
+	display: flex;
+	align-items: center;
+}
+
+.sabor_descricao{
+	display: flex;
+	flex-direction: column;
+}
+
+.selecionado{
+	background-color: #aad3c6;
+	transition: 1s;
+} 
+
+#lista_sabores{
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	flex-wrap: wrap;
+} 
+
+/******************************************************** query desktop */
+
+@media only screen and (min-width: 700px){
+	main{
+		width: 85%;
+	}
+
+	aside{
+		width: 15%;
+		height: 400px;
+		margin-top: 20px;		
+	}
+
+	main, aside{
+		float: left;
+	} 
+	
+	footer{
+		clear: left;
+	} 
+	#heart{
+		float: left; 
+		display: initial; /* ou inline */
+	} 	
+	
+	#chat{
+		display: initial; /* ou block */
+	}
+
+	nav ul li {
+		display: inline; /* transforma elementos de bloco em inline */
+		margin: 0 20px 0 0; /* sentido horário: top, right, bottom, left */
+		/*margin-right: 20px; -> alternativa */
+	}
+	
+	nav {
+		display: block;
+	}
+
+	#showMenu {
+		display: none;
+	}
 }

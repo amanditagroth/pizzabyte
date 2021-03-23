@@ -14,7 +14,7 @@
     <header>
         <h1>Pizza Byte</h1>
         <p>Love at first byte</p>
-        <span id="showMenu">&equiv; Menu</span>
+        <span id="showMenu" onclick="showMenu()">&equiv; Menu</span>
     </header>
 
     <nav>
@@ -33,7 +33,10 @@
         <h2>Início</h2>
         <hr>
         <div id="imgByte">
-            <img src="assets/images/pizza_byte.jpg" id="byte" alt="Imagem de uma pizza pixelizada">
+            <picture>
+                <source media="(min-width: 700px)" srcset="assets/images/pizza.jpg" width="200px">
+                <img src="assets/images/pizza_byte.jpg" id="byte" alt="Imagem de uma pizza pixelizada">
+            </picture>
             <h3>Love at first byte!</h3>
         </div>
     </main>
@@ -43,7 +46,14 @@
     </aside>
 
     <footer>
-        <div id="chat">Clique aqui para falar com os atendentes</div>
+        <div id="chat">
+            <div id="texto">Clique aqui para falar com os atendentes</div>
+            <div id="botoes">
+                <span id="minChat" class="btChat" onclick="minChat()">&or;</span>
+                <span id="maxChat" class="btChat" onclick="maxChat()">&and;</span>
+                <span id="closeChat" class="btChat" onclick="closeChat()">x</span>
+            </div>
+        </div>
         <p>Pizzaria Byte</p>
         <p>
             Peça pelo telefone (49)00000-0000

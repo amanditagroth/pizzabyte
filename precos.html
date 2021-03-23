@@ -14,6 +14,7 @@
     <header>
         <h1>Pizza Byte</h1>
         <p>Love at first byte</p>
+        <span id="showMenu" onclick="showMenu()">&equiv; Menu</span>
     </header>
 
     <nav>
@@ -71,7 +72,14 @@
     </aside>
 
     <footer>
-        <div id="chat">Clique aqui para falar com os atendentes</div>
+        <div id="chat">
+            <div id="texto">Clique aqui para falar com os atendentes</div>
+            <div id="botoes">
+                <span id="minChat" class="btChat" onclick="minChat()">&or;</span>
+                <span id="maxChat" class="btChat" onclick="maxChat()">&and;</span>
+                <span id="closeChat" class="btChat" onclick="closeChat()">x</span>
+            </div>
+        </div>
         <p>Pizzaria Byte</p>
         <p>
             Peça pelo telefone (49)00000-0000

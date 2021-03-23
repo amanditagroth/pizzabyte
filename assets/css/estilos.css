@@ -39,13 +39,10 @@ header p {
 	font-style: italic;
 	font-family: serif;
 	text-transform: capitalize;
-	text-indent: 30px;
+	/* text-indent: 30px; */
 	letter-spacing: 5px;
 	word-spacing: 10px;
 	direction: ltr; /* left to right */
-	position: absolute;
-	right: 10px;
-	bottom: 0px;
 }
 
 hr {
@@ -103,13 +100,6 @@ nav  {
 /***************************************************** chat */
 
 #chat{
-    color: black;
-    background-color: lightyellow;
-	width: 300px;
-	height: 150px;
-	position: fixed;
-	bottom: 0;
-	right: 50px;
 	display: none;
 }
 
@@ -141,13 +131,6 @@ tr:nth-child(odd){
 
 #imgByte{
 	text-align: center;
-} 
-
-#imgByte h3{
-	float: left;
-	position: relative;
-	top: 50px;
-	left: 50px;
 } 
 
 
@@ -187,6 +170,10 @@ input[type=date],textarea, select {
 /******************************************************** footer */
 footer ul li {
 	display: inline;
+}
+
+footer ul{
+	padding: 0;
 }
 
 footer{
@@ -267,7 +254,28 @@ footer{
 	} 	
 	
 	#chat{
-		display: initial; /* ou block */
+		display: flex; 
+		color: black;
+		background-color: lightyellow;
+		width: 300px;
+		height: 150px;
+		position: fixed;
+		bottom: 0;
+		right: 50px;	
+		align-items: flex-start;	
+		justify-content: space-between;
+	}
+
+	#chat .btChat{
+		background-color: #cccccc;
+		border: 1px solid black;
+		padding: 2px 5px;
+		margin: 2px;
+		cursor: pointer;
+	}
+
+	#chat #botoes{
+		display: flex;
 	}
 
 	nav ul li {
@@ -282,5 +290,21 @@ footer{
 
 	#showMenu {
 		display: none;
+	}
+	header p {
+		position: absolute;
+		right: 10px;
+		bottom: 0px;
+	}	
+
+	#imgByte h3{
+		float: left;
+		position: relative;
+		top: 50px;
+		left: 50px;
+	} 	
+
+	#byte{
+		max-width: 800px;
 	}
 }

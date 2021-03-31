@@ -228,6 +228,10 @@ footer{
 	flex-wrap: wrap;
 } 
 
+#opcoes_pedido{
+	display: none;
+}
+
 /******************************************************** query desktop */
 
 @media only screen and (min-width: 700px){
